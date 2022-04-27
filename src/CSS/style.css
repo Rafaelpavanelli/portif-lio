@@ -1,0 +1,273 @@
+::-webkit-scrollbar{
+    color: transparent;
+    width: 0;
+}
+@keyframes move-whell{
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+@keyframes rotate{
+    50%{
+        background-image: linear-gradient(
+            360deg,
+            #ff512f,
+            #dd2476,
+            #1c64ff
+
+        ) 1;
+    }
+}
+.mouse{
+    background-color: rgba(69, 69, 69, 0.611);
+    width: 25px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    position: fixed;
+    bottom:  20%;
+    right: 2%;
+    z-index: 1;
+
+}
+.mouse-whell{
+    display: block;
+    width: 5px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-whell 1.5s linear infinite;
+}
+@media (max-width:480px){
+    
+@keyframes move-whell{
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+@keyframes rotate{
+    50%{
+        background-image: linear-gradient(
+            360deg,
+            #ff512f,
+            #dd2476,
+            #1c64ff
+
+        ) 1;
+    }
+}
+
+.mouse{
+    background-color: rgba(69, 69, 69, 0.611);
+    width: 25px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    position: fixed;
+    bottom:  20%;
+    right: 2%;
+
+}
+.mouse-whell{
+    display: block;
+    width: 5px;
+ 
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 5px;
+    animation: move-whell 1.5s linear infinite;
+}
+}
+/* Config da animação do Scroll */
+/* Inicio do corpo */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    background-color: white;
+    box-sizing: content-box;
+}
+#image{
+    height: 45vh;
+    width: 20%;
+    float: right;
+    margin-top: 10%;
+    transform: translateX(-280px);
+    
+    
+  
+}
+
+#image img{
+   height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    border: 2px solid white;
+   
+   
+  
+}
+.content-inicio{
+    
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(33, 33, 33) 73%, rgb(190, 190, 190) 73%);
+}
+#conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    /* s */
+    width: 50%;
+    height: 100vh;
+   box-sizing: border-box;
+   padding: 10%;
+  
+
+}
+
+#conteudo h1{
+    position: relative;
+    transform-style:preserve-3d ;
+    color: rgb(255, 255, 255);
+    padding: 10%;
+    text-shadow: 8px 7px 10px gray;
+    font-size: 3rem;
+    font-family: sans-serif;
+    animation: move 2s ease-in-out infinite;
+  
+}
+@keyframes move {
+    0%{
+        transform: translateZ(-5px)
+        rotateX(1deg) rotateY(-2deg);
+    }
+   
+
+    50%{
+        transform: translateZ(8px)
+        rotateX(-7deg) rotateY(-7deg);
+    }
+    100%{
+        transform: translateZ(5px)
+        rotateX(2deg) rotateY(-4deg);
+    }
+    
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+@keyframes animation-text{
+    0%{
+       transform: rotate3d(0,1,10,14); 
+    }
+    50%{
+        transform: rotate3d(0,1,15,14);
+    }
+    100%{
+        transform: rotate3d(0,1,-10,14); 
+    }
+}
+.habilidades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+ 
+}
+.habilidades h1{
+    font-size: 4rem;
+    margin-bottom: 5%;
+    margin-top: 10%;
+   
+}
+#Cursos-web{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left:15% ;
+   
+
+    
+}
+#Cursos-web h2{
+    font-size: 2em;
+    margin-left: 50px;
+    
+  
+}
+
+#Cursos-web img{
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    border-radius: 10%;
+   
+    
+    
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+
+}
+.box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+   stroke-width: 10;
+   stroke:  #000;
+   transform: translate(5px,5px);
+
+}
